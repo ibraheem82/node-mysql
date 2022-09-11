@@ -1,4 +1,4 @@
-const sql = require("msql");
+const sql = require("mysql");
 const dotenv = require("dotenv").config();
 const db = sql.createConnection({
     host:process.env.DATABASE_HOST,
@@ -7,6 +7,4 @@ const db = sql.createConnection({
     database:process.env.DATABASE
 })
 
-module.exports = [
-    db
-]
+module.exports = db
