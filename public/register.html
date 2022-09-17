@@ -33,7 +33,7 @@
       </nav>
 
 
-      <div class="container">
+      <div class="container my-5">
         <div class="card" style="width: 100%;">
             <div class="card-body">
               <h3 class="card-title">Register form</h3>
@@ -41,13 +41,16 @@
               <form onsubmit="false" id="form">
                 <div class="mb-3">
                   <label for="email" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off" required>
                   <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                   <label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="off" required>
                 </div>
+
+                <div class="alert alert-danger" role="alert" id="error" style="display: none;"></div>
+                <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
                
                 <button type="submit" class="btn btn-primary">Register</button>
               </form>
