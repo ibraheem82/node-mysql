@@ -1,21 +1,21 @@
 const express = require("express");
-const router = express.Router()
+const router = express.Router();
 
 
-router.get("/", (res, req) => {
+router.get("/", (req, res) => {
     res.render("index");
 })
 
 
 
-router.get("/register", (res, req) => {
-    res.sendFle("register.html", {root: "/public/"});
+router.get("/register", (req, res) => {
+    res.sendFile("register.html", {root: "./public/"});
 })
 
 
 
-router.get("/login", (res, req) => {
-    res.sendFle("login.html", {root: "./public/"});
+router.get("/login", (req, res) => {
+    res.sendFile("login.html", {root: "./public/"});
 })
 
 module.exports = router;
